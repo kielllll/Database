@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1278.0" style="-fx-background-color: rgba(255,255,186);" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.employees.EmployeesController">
+   <children>
+      <JFXButton fx:id="btnRefresh" layoutX="1120.0" layoutY="33.0" text="Refresh">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/reload.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXHamburger fx:id="hamburger" layoutX="1207.0" layoutY="36.0" />
+      <TableView fx:id="table" layoutX="39.0" layoutY="97.0" prefHeight="194.0" prefWidth="1200.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn fx:id="colEmpID" prefWidth="89.0" text="Employee ID" />
+          <TableColumn fx:id="colFName" prefWidth="211.0" text="First Name" />
+            <TableColumn fx:id="colLName" prefWidth="200.0" text="Last Name" />
+            <TableColumn fx:id="colContact" prefWidth="200.0" text="Contact #" />
+            <TableColumn fx:id="colBDate" prefWidth="200.0" text="Birthdate" />
+            <TableColumn fx:id="colGender" prefWidth="150.0" text="Gender" />
+            <TableColumn fx:id="colStatus" prefWidth="134.0" text="Status" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearch" labelFloat="true" layoutX="952.0" layoutY="64.0" prefHeight="25.0" prefWidth="288.0" promptText="Search Employee ID" />
+      <Pane layoutX="39.0" layoutY="300.0" prefHeight="336.0" prefWidth="584.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-color: rgba(192,192,192,0.5); -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="207.0" layoutY="14.0" text="Add Employee">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../lib/images/profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXTextField fx:id="txtAddFName" labelFloat="true" layoutX="39.0" layoutY="65.0" prefHeight="25.0" prefWidth="252.0" promptText="First Name" />
+            <JFXTextField fx:id="txtAddLName" labelFloat="true" layoutX="309.0" layoutY="65.0" prefHeight="25.0" prefWidth="252.0" promptText="Last Name" />
+            <JFXTextField fx:id="txtAddContact" labelFloat="true" layoutX="40.0" layoutY="120.0" prefHeight="25.0" prefWidth="252.0" promptText="Contact Number" />
+            <JFXDatePicker fx:id="dpAddBDate" layoutX="309.0" layoutY="117.0" prefHeight="25.0" prefWidth="260.0" promptText="Birthdate" />
+            <JFXComboBox fx:id="cbAddUnitID" labelFloat="true" layoutX="40.0" layoutY="175.0" prefHeight="25.0" prefWidth="252.0" promptText="Unit ID" />
+            <JFXComboBox fx:id="cbAddGender" labelFloat="true" layoutX="309.0" layoutY="175.0" prefHeight="25.0" prefWidth="252.0" promptText="Gender" />
+            <JFXComboBox fx:id="cbAddCompID" labelFloat="true" layoutX="40.0" layoutY="230.0" prefHeight="25.0" prefWidth="252.0" promptText="Company ID" />
+            <JFXComboBox fx:id="cbAddEmpTypeID" labelFloat="true" layoutX="309.0" layoutY="230.0" prefHeight="25.0" prefWidth="252.0" promptText="Employee Type ID" />
+            <JFXButton fx:id="btnAdd" layoutX="335.0" layoutY="284.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Add" />
+            <JFXButton fx:id="btnClearAddFields" layoutX="461.0" layoutY="284.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Clear" />
+         </children>
+      </Pane>
+      <Pane layoutX="653.0" layoutY="300.0" prefHeight="336.0" prefWidth="584.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-color: rgba(192,192,192,0.5); -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="171.0" layoutY="15.0" text="Update Employee">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../lib/images/profile.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXTextField fx:id="txtUpdateFName" labelFloat="true" layoutX="40.0" layoutY="65.0" prefHeight="25.0" prefWidth="252.0" promptText="First Name" />
+            <JFXTextField fx:id="txtUpdateLName" labelFloat="true" layoutX="309.0" layoutY="65.0" prefHeight="25.0" prefWidth="252.0" promptText="Last Name" />
+            <JFXTextField fx:id="txtUpdateContact" labelFloat="true" layoutX="40.0" layoutY="120.0" prefHeight="25.0" prefWidth="252.0" promptText="Contact Number" />
+            <JFXDatePicker fx:id="dpUpdateBDate" layoutX="309.0" layoutY="117.0" prefHeight="25.0" prefWidth="260.0" promptText="Birthdate" />
+            <JFXComboBox fx:id="cbUpdateUnitID" labelFloat="true" layoutX="40.0" layoutY="175.0" prefHeight="25.0" prefWidth="252.0" promptText="Unit ID" />
+            <JFXComboBox fx:id="cbUpdateGender" labelFloat="true" layoutX="309.0" layoutY="175.0" prefHeight="25.0" prefWidth="252.0" promptText="Gender" />
+            <JFXComboBox fx:id="cbUpdateCompID" labelFloat="true" layoutX="40.0" layoutY="230.0" prefHeight="25.0" prefWidth="252.0" promptText="Company ID" />
+            <JFXComboBox fx:id="cbUpdateEmpTypeID" labelFloat="true" layoutX="309.0" layoutY="230.0" prefHeight="25.0" prefWidth="252.0" promptText="Employee Type ID" />
+            <JFXComboBox fx:id="cbUpdateStatus" labelFloat="true" layoutX="40.0" layoutY="285.0" prefHeight="25.0" prefWidth="252.0" promptText="Status" />
+            <JFXButton fx:id="btnUpdate" layoutX="335.0" layoutY="284.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Update" />
+            <JFXButton fx:id="btnClearUpdateFields" layoutX="461.0" layoutY="284.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Clear" />
+            <JFXTextField fx:id="txtEmpID" labelFloat="true" layoutX="436.0" layoutY="22.0" prefHeight="25.0" prefWidth="133.0" promptText="Employee ID" />
+         </children>
+      </Pane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="650.0" prefWidth="30.0" />
+      <Label layoutX="452.0" layoutY="27.0" text="Employee Panel">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/multiple-users-silhouette.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+   </children>
+</AnchorPane>

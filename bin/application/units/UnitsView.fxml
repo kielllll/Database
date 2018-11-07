@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1278.0" style="-fx-background-color: rgba(255,255,186);" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.units.UnitsController">
+   <children>
+      <Label layoutX="520.0" layoutY="27.0" text="Unit Panel">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/truck.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXHamburger fx:id="hamburger" layoutX="1207.0" layoutY="36.0" />
+      <Pane layoutX="110.0" layoutY="150.0" prefHeight="333.0" prefWidth="501.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-color: rgba(192,192,192,0.5); -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="14.0" layoutY="15.0" text="Unit">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../lib/images/truck.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXTextField fx:id="txtUnitID" disable="true" labelFloat="true" layoutX="272.0" layoutY="22.0" prefHeight="20.0" prefWidth="200.0" promptText="Unit ID" />
+            <JFXTextField fx:id="txtUnitName" labelFloat="true" layoutX="14.0" layoutY="120.0" prefHeight="20.0" prefWidth="200.0" promptText="Unit Name" />
+            <JFXComboBox fx:id="cbUnitStatus" labelFloat="true" layoutX="272.0" layoutY="120.0" prefHeight="20.0" prefWidth="200.0" promptText="Status" />
+            <JFXButton fx:id="btnAdd" layoutX="143.0" layoutY="285.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Add" />
+            <JFXButton fx:id="btnUpdate" layoutX="258.0" layoutY="285.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Update" />
+            <JFXButton fx:id="btnClear" layoutX="372.0" layoutY="285.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Clear" />
+         </children>
+      </Pane>
+      <JFXTextField fx:id="txtSearchID" labelFloat="true" layoutX="668.0" layoutY="117.0" promptText="Search Unit ID" />
+      <TableView fx:id="table" layoutX="668.0" layoutY="150.0" prefHeight="333.0" prefWidth="501.0">
+        <columns>
+          <TableColumn fx:id="colUnitID" prefWidth="84.0" text="Unit ID" />
+          <TableColumn fx:id="colUnitName" prefWidth="265.0" text="Name" />
+            <TableColumn fx:id="colUnitStatus" prefWidth="150.0" text="Status" />
+        </columns>
+      </TableView>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="650.0" prefWidth="100.0" />
+   </children>
+</AnchorPane>

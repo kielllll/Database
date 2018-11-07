@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1278.0" style="-fx-background-color: rgba(255,255,186);" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.salary.SalaryController">
+   <children>
+      <Label layoutX="525.0" layoutY="27.0" text="Salary Panel">
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/philippine-peso.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnRefresh" layoutX="1122.0" layoutY="32.0" text="Refresh">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/reload.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXHamburger fx:id="hamburger" layoutX="1207.0" layoutY="36.0" />
+      <JFXTextField fx:id="txtSearchSalaryID" labelFloat="true" layoutX="115.0" layoutY="106.0" promptText="Search Salary ID" />
+      <TableView fx:id="tblSalary" layoutX="115.0" layoutY="140.0" prefHeight="200.0" prefWidth="385.0">
+         <columns>
+            <TableColumn fx:id="colSalaryID" prefWidth="90.99996948242188" text="Salary ID" />
+            <TableColumn fx:id="colEmpID" prefWidth="111.0" text="Employee ID" />
+            <TableColumn fx:id="colStatus" prefWidth="166.0" text="Status" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearchDtrID" labelFloat="true" layoutX="520.0" layoutY="106.0" promptText="Search DTR ID" />
+      <TableView fx:id="tblDtr" layoutX="520.0" layoutY="140.0" prefHeight="200.0" prefWidth="643.0">
+         <columns>
+            <TableColumn fx:id="colDtrID" prefWidth="170.0" text="DTR ID" />
+            <TableColumn fx:id="colSalaryID2" prefWidth="211.0" text="Salary ID" />
+            <TableColumn fx:id="colDate" prefWidth="152.0" text="Date" />
+            <TableColumn fx:id="colHours" prefWidth="90.0" text="Hours" />
+         </columns>
+      </TableView>
+      <Pane layoutX="115.0" layoutY="352.0" prefHeight="284.0" prefWidth="501.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-color: rgba(192,192,192,0.5); -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="14.0" layoutY="15.0" text="Salary">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../lib/images/philippine-peso.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXTextField fx:id="txtSalaryID" labelFloat="true" layoutX="241.0" layoutY="22.0" prefHeight="20.0" prefWidth="234.0" promptText="Salary ID" />
+            <JFXComboBox fx:id="cbEmpID" labelFloat="true" layoutX="14.0" layoutY="120.0" prefHeight="20.0" prefWidth="234.0" promptText="Employee ID" />
+            <JFXTextField fx:id="txtAbsences" labelFloat="true" layoutX="264.0" layoutY="120.0" prefHeight="25.0" prefWidth="211.0" promptText="Number of absences" />
+            <JFXComboBox fx:id="cbStatus" labelFloat="true" layoutX="14.0" layoutY="164.0" prefHeight="20.0" prefWidth="234.0" promptText="Status" />
+            <JFXButton fx:id="btnAddSalary" layoutX="146.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Add" />
+            <JFXButton fx:id="btnUpdateSalary" layoutX="261.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Update" />
+            <JFXButton fx:id="btnClearSalary" layoutX="375.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Clear" />
+         </children>
+      </Pane>
+      <Pane layoutX="661.0" layoutY="352.0" prefHeight="284.0" prefWidth="501.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-color: rgba(192,192,192,0.5); -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="18.0" layoutY="15.0" text="Daily Time Record">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../lib/images/notepad.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXTextField fx:id="txtDtrID" labelFloat="true" layoutX="289.0" layoutY="22.0" prefHeight="25.0" prefWidth="183.0" promptText="DTR ID" />
+            <JFXComboBox fx:id="cbSalaryID" labelFloat="true" layoutX="14.0" layoutY="85.0" prefHeight="20.0" prefWidth="234.0" promptText="Salary ID" />
+            <JFXDatePicker fx:id="dpDtrDate" layoutX="14.0" layoutY="129.0" prefHeight="25.0" prefWidth="234.0" promptText="Date" />
+            <JFXTextField fx:id="txtDtrHours" labelFloat="true" layoutX="14.0" layoutY="175.0" prefHeight="25.0" prefWidth="234.0" promptText="Number of Hours" />
+            <JFXButton fx:id="btnAddDtr" layoutX="143.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Add" />
+            <JFXButton fx:id="btnUpdateDtr" layoutX="258.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Update" />
+            <JFXButton fx:id="btnClearDtr" layoutX="372.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Clear" />
+         </children>
+      </Pane>
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="650.0" prefWidth="100.0" />
+      <JFXTextField fx:id="txtTotalAmount" labelFloat="true" layoutX="1028.0" layoutY="106.0" promptText="Total Amount" />
+   </children>
+</AnchorPane>

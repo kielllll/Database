@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="650.0" prefWidth="100.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton accessibleText="Payroll" alignment="CENTER" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,186); -fx-border-color: black;" text="Payroll">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/notepad.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton accessibleText="Employees" alignment="CENTER" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,186); -fx-border-color: black;" text="Employees">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/multiple-users-silhouette.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton accessibleText="Companies" alignment="CENTER" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,186); -fx-border-color: black;" text="Company">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/factory.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton accessibleText="Units" alignment="CENTER" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,186); -fx-border-color: black;" text="Units">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/truck.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton accessibleText="Salary" alignment="CENTER" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,186); -fx-border-color: black;" text="Salary">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/philippine-peso.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <JFXButton accessibleText="Deduction" alignment="CENTER" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,186); -fx-border-color: black;" text="Deduction">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/decrease.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <ImageView fitHeight="160.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXButton accessibleText="Logout" alignment="CENTER" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: rgba(255,255,186); -fx-border-color: black;" text="Logout">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/log-out.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+   </children>
+</VBox>

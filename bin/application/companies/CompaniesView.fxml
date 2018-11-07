@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1278.0" style="-fx-background-color: rgba(255,255,186);" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.companies.CompaniesController">
+   <children>
+      <Label layoutX="553.0" layoutY="27.0" text="Company Panel">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../lib/images/factory.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <JFXHamburger fx:id="hamburger" layoutX="1207.0" layoutY="36.0" />
+      <Pane layoutX="110.0" layoutY="346.0" prefHeight="284.0" prefWidth="501.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-color: rgba(192,192,192,0.5); -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="17.0" layoutY="9.0" text="Company">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../lib/images/factory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXTextField fx:id="txtCompID" disable="true" labelFloat="true" layoutX="269.0" layoutY="16.0" prefHeight="20.0" prefWidth="200.0" promptText="Company ID" />
+            <JFXTextField fx:id="txtCompName" labelFloat="true" layoutX="14.0" layoutY="71.0" prefHeight="20.0" prefWidth="200.0" promptText="Company Name" />
+            <JFXTextField fx:id="txtCompContact" labelFloat="true" layoutX="266.0" layoutY="71.0" prefHeight="20.0" prefWidth="200.0" promptText="Contact Number" />
+            <JFXTextField fx:id="txtCompLocation" labelFloat="true" layoutX="14.0" layoutY="127.0" prefHeight="25.0" prefWidth="458.0" promptText="Address" />
+            <JFXButton fx:id="btnAddComp" layoutX="143.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Add" />
+            <JFXButton fx:id="btnUpdateComp" layoutX="258.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Update" />
+            <JFXButton fx:id="btnClearComp" layoutX="372.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Clear" />
+         </children>
+      </Pane>
+      <Pane layoutX="668.0" layoutY="346.0" prefHeight="284.0" prefWidth="501.0" style="-fx-border-color: black; -fx-border-radius: 20; -fx-background-color: rgba(192,192,192,0.5); -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="16.0" layoutY="14.0" text="Employee Type">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../lib/images/multiple-users-silhouette.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <JFXTextField fx:id="txtEmpTypeID" disable="true" labelFloat="true" layoutX="270.0" layoutY="21.0" prefHeight="20.0" prefWidth="200.0" promptText="Employee Type ID" />
+            <JFXTextField fx:id="txtEmpType" labelFloat="true" layoutX="14.0" layoutY="77.0" prefHeight="25.0" prefWidth="234.0" promptText="Employee Type" />
+            <JFXTextField fx:id="txtRate" labelFloat="true" layoutX="14.0" layoutY="124.0" prefHeight="25.0" prefWidth="234.0" promptText="Rate" />
+            <JFXTextField fx:id="txtDesc" labelFloat="true" layoutX="14.0" layoutY="167.0" prefHeight="25.0" prefWidth="458.0" promptText="Description" />
+            <JFXButton fx:id="btnAddEmpType" layoutX="141.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Add" />
+            <JFXButton fx:id="btnUpdateEmpType" layoutX="256.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Update" />
+            <JFXButton fx:id="btnClearEmpType" layoutX="370.0" layoutY="243.0" prefHeight="25.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-radius: 20;" text="Clear" />
+            <JFXComboBox fx:id="cbCompID" labelFloat="true" layoutX="272.0" layoutY="77.0" prefHeight="20.0" prefWidth="200.0" promptText="Company ID" />
+         </children>
+      </Pane>
+      <TableView fx:id="tblComp" layoutX="115.0" layoutY="148.0" prefHeight="177.0" prefWidth="491.0">
+        <columns>
+          <TableColumn fx:id="colCompID" prefWidth="31.999969482421875" text="ID" />
+          <TableColumn fx:id="colCompName" prefWidth="142.0" text="Company Name" />
+            <TableColumn fx:id="colCompLocation" prefWidth="199.0" text="Location" />
+            <TableColumn fx:id="colCompContact" prefWidth="100.0" text="Contact #" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tblEmpType" layoutX="673.0" layoutY="148.0" prefHeight="177.0" prefWidth="491.0">
+         <columns>
+            <TableColumn fx:id="colEtID" prefWidth="40.0" text="ID" />
+            <TableColumn fx:id="colCompID2" prefWidth="55.0" text="Comp ID" />
+            <TableColumn fx:id="colEtName" prefWidth="120.0" text="Name" />
+            <TableColumn fx:id="colEtDesc" prefWidth="205.0" text="Description" />
+            <TableColumn fx:id="colEtRate" prefWidth="56.0" text="Rate" />
+         </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearchCompID" labelFloat="true" layoutX="115.0" layoutY="116.0" promptText="Search Company ID" />
+      <JFXTextField fx:id="txtSearchEmpTypeID" labelFloat="true" layoutX="673.0" layoutY="116.0" promptText="Search Employee Type ID" />
+      <JFXDrawer fx:id="drawer" defaultDrawerSize="190.0" prefHeight="650.0" prefWidth="100.0" />
+   </children>
+</AnchorPane>
